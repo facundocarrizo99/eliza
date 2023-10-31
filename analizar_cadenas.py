@@ -9,12 +9,6 @@ def analizarcadena(d,e):
             print("true")
             print(d[palabra])
     return flag
-        
-    
-    
-    
-    
-    
 
 dicc={"porque":("huevo","Huevo2","HUEVO3","HUEVO4","HUEVO35"),
       "me":"hola",
