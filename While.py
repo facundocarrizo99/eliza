@@ -1,7 +1,8 @@
 print("Hola! ¿Cual es tu problema?")
-aux = input("")
-while aux != "adios":
-    print("ok...")
-    aux = input("")
-    
+entrada = input("ingrese su inquietud")
+while entrada != "adios":
+    respuesta = analizarcadena(dicc, entrada)
+    print(respuesta)
+    entrada = input("")
+
 print("¡Nos vemos! ¡Gracias!")
