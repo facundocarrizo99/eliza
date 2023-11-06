@@ -1,7 +1,7 @@
 def obtener_despues_de_porque(cadena):
     # Busca la palabra "porque" en la cadena
     indice_porque = cadena.find("porque")
-    
+    print(indice_porque)
     # Si se encuentra "porque", guarda todo lo que sigue
     if indice_porque != -1:
         resultado = cadena[indice_porque + len("porque"):]
