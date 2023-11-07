@@ -1,0 +1,41 @@
+INICIO DE LA CONVERSACION
+Usuario: hola
+Eliza: Hola
+Usuario: estoy triste
+Eliza: Porque estas triste?
+Usuario: enojado
+Eliza: Contame más sobre por qué estás enojado.
+Usuario: porque estoy en clase
+Eliza: A que se debe que estes asi
+Usuario: quiero dormir
+Eliza: continue
+FIN DE LA CONVERSACION
+
+INICIO DE LA CONVERSACION
+Usuario:  puta
+Eliza: no entiendo
+Usuario: hola
+Eliza: Contame
+Usuario: rawr
+Eliza: por que?
+Usuario: nice
+Eliza: ok
+Usuario: tienes depresion_
+Eliza: no entiendo
+Usuario: tengo depresion
+Eliza: desde cuando?
+Usuario: desde hace 3 segundos
+Eliza: continue
+FIN DE LA CONVERSACION
+
+INICIO DE LA CONVERSACION
+Usuario: hola
+Eliza: Bienvenido
+Usuario: si
+Eliza: por que?
+Usuario: no
+Eliza: ok
+Usuario: hola
+Eliza: Hola
+FIN DE LA CONVERSACION
+
