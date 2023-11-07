@@ -1,9 +1,9 @@
 dic = {
-    "sinrespuesta":("Ok","No entiendo","Continue","Por que?", "Hableme mas"),
-    "hola":("Hola","te escucho","contame","bienvenido"),
-    "estoy":("Por qué estas ","A que se debe que estes ","Por qué pensas que estás ","Crees que es normal estar"),
-    "tengo":("Por qué tenés","Como crees que obtuviste","Desde cuando tenés","Y si no tuvieras" ),
-    "adios":("Nos vemos!"),
+    'sinrespuesta':("Ok","No entiendo","Continue","Por que?", "Hableme mas"),
+    'hola':("Hola","te escucho","Contame","Bienvenido"),
+    'estoy':("Por qué estas ","A que se debe que estes ","Por qué pensas que estás ","Crees que es normal estar"),
+    'tengo':("Por qué tenés","Como crees que obtuviste","Desde cuando tenés","Y si no tuvieras" ),
+    'adios':("Nos vemos!"),
     'enojado': ("El enojo es normal. ¿Qué te pasó?", "Hablemos de eso. Expresar el enojo es importante.", "Contame más sobre por qué estás enojado."),
     'cansado': ("¿Tuviste un día agitado?", "¿Necesitás ayuda para relajarte?", "Hablemos sobre la importancia de descansar."),
     'terapia': ("La terapia es muy útil. ¿Alguna vez pensaste en hablar con un terapeuta profesional?", "La terapia puede brindarte apoyo. ¿Tenés dudas al respecto?", "Estoy acá para orientarte sobre la terapia."),
@@ -44,6 +44,10 @@ dic = {
     'sobrino': ("Los sobrinos pueden ser una fuente de alegría. ¿Tenés historias o preocupaciones sobre tu sobrino?"),
     'sobrinos': ("Los sobrinos pueden ser una fuente de alegría. ¿Tenés historias o preocupaciones sobre tus sobrinos?"),
     'primo': ("Los primos son como amigos de la familia. ¿Hay algo específico que quieras discutir sobre tu primo?"),
-    'primos': ("Los primos son como amigos de la familia. ¿Hay algo específico que quieras discutir sobre tus primos?")
- 
+    'primos': ("Los primos son como amigos de la familia. ¿Hay algo específico que quieras discutir sobre tus primos?"),
+    'como estas' : ("Estoy bien, hablemos de vos, como estás?"),
+    'como te llamas' : ("Mi nombre es ELIZA"),
+    'cual es tu nombre'  : ("Mi nombre es ELIZA"),
+    'como es tu nombre'  : ("Mi nombre es ELIZA"),
+    
     }
