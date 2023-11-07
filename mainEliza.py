@@ -11,7 +11,7 @@ def componerOracion(texto, listaPalabras):
         value = texto
     return value
 
-def analizarcadena(dic,listaPalabras):
+def analizarCadena(dic, listaPalabras):
     for palabra in listaPalabras:
         if palabra in dic:
             respuesta = random.choice(dic[palabra])
@@ -23,7 +23,7 @@ def analizarcadena(dic,listaPalabras):
 
 def procesarCadena(entrada):
     listaPalabras = entrada.split()
-    respuestaInicial = analizarcadena(dic.diccionario, listaPalabras)
+    respuestaInicial = analizarCadena(dic.diccionario, listaPalabras)
     if "*" in respuestaInicial:
         cadCompuesta = componerOracion(respuestaInicial, listaPalabras)
         print(cadCompuesta)
@@ -44,6 +44,7 @@ print()
 entrada = input("Hola! ¿Cual es tu problema?")
 entrada = entrada.lower()
 mensajeAnterior = ""
+
 while entrada != "adios":
     ultimoMensaje = limpiar_texto(entrada)
     if ultimoMensaje == mensajeAnterior:
