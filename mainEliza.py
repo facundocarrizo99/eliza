@@ -46,6 +46,7 @@ entrada = entrada.lower()
 mensajeAnterior = ""
 
 while entrada != "adios":
+    #Analizar como sacar los caracteres de puntuacion del analisis
     ultimoMensaje = limpiar_texto(entrada)
     if ultimoMensaje == mensajeAnterior:
         print("ya te conteste esta pregunta, tienes otra consulta...?")
