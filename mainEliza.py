@@ -32,10 +32,16 @@ def procesarCadena(entrada):
         print(respuestaInicial)
         registro_conversacion.append(f"Usuario: {entrada}\nEliza: {respuestaInicial}\n")
 
-def limpiar_texto(entrada):
+def limpiarTexto(entrada):
     entrada = entrada.lower()
     entrada = "".join(c for c in entrada if c.isalnum())
     return entrada
+
+def sacarPuntuacion(cadena):
+    for carPuntuacion in cadena:
+        if carPuntuacion in dic.punc:
+            cadena = cadena.replace(carPuntuacion, "")
+    return cadena
 
 registro_conversacion = []
 print("Bienvenido a Eliza, tu psicologa virtual")
@@ -46,14 +52,13 @@ entrada = entrada.lower()
 mensajeAnterior = ""
 
 while entrada != "adios":
-    #Analizar como sacar los caracteres de puntuacion del analisis
-    ultimoMensaje = limpiar_texto(entrada)
+    ultimoMensaje = limpiarTexto(entrada)
     if ultimoMensaje == mensajeAnterior:
         print("ya te conteste esta pregunta, tienes otra consulta...?")
         mensajeAnterior = ultimoMensaje
     else:
         mensajeAnterior = ultimoMensaje
-        procesarCadena(entrada)
+        procesarCadena(sacarPuntuacion(entrada)) #Sacamos los caracteres de puntuacion antes de comparar los elementos
     print()
     entrada = input("").lower()
 
