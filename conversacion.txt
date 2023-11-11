@@ -149,3 +149,16 @@ Usuario: si
 Eliza: Pareces muy seguro
 FIN DE LA CONVERSACION
 
+INICIO DE LA CONVERSACION
+Usuario: hola
+Eliza: Hola
+Usuario: estoy triste
+Eliza: crees que es normal estar triste?
+Usuario: si
+Eliza: Ok, podes elaborar mas?
+Usuario: me siento cansado
+Eliza: ¿Necesitás ayuda para relajarte?
+Usuario: si
+Eliza: Pareces muy seguro
+FIN DE LA CONVERSACION
+
