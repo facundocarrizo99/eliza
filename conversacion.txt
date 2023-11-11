@@ -138,3 +138,14 @@ Usuario: cansado
 Eliza: estoy cansado jefe
 FIN DE LA CONVERSACION
 
+INICIO DE LA CONVERSACION
+Usuario: fran
+Eliza: trabajamos mucho
+Usuario: si
+Eliza: Ok, podes elaborar mas?
+Usuario: no
+Eliza: podes elaborar mas?
+Usuario: si
+Eliza: Pareces muy seguro
+FIN DE LA CONVERSACION
+

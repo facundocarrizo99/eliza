@@ -55,8 +55,7 @@ def hablarConEliza():
             mensajeAnterior = ultimoMensaje
         else:
             mensajeAnterior = ultimoMensaje
-            procesarCadena(
-                sacarPuntuacion(entrada))  # Sacamos los caracteres de puntuacion antes de comparar los elementos
+            procesarCadena(sacarPuntuacion(entrada))  # Sacamos los caracteres de puntuacion antes de comparar los elementos
         print()
         entrada = input("").lower()
 
@@ -69,32 +68,31 @@ def hablarConEliza():
 
 def agregarVariasRespuestas():
     listaRespuestas = []
-    unaNuevasRespuestas = input("Ingrese una respueta: ")
-    while unaNuevasRespuestas != "xyz123":
+    unaNuevasRespuestas = input("Ingrese una respuesta: ")
+    while unaNuevasRespuestas != "1":
         listaRespuestas.append(unaNuevasRespuestas)
-        unaNuevasRespuestas = input("Ingrese otra respueta: ")
+        unaNuevasRespuestas = input("Ingrese otra respuesta: ")
     return tuple(listaRespuestas)
 
 def validarExistencia():
     clave = input("Ingrese UNA palabra clave: ")
-    if clave in dic.diccionario:
-        clave = input("Ingrese otra Palabra Clave, la anterior ya existe: ")
-        validarExistencia()
+    while clave in dic.diccionario:
+        clave = (input("Ingrese otra Palabra Clave, la anterior ya existe: "))
     return clave
 
 def agregarRespuestas():
     print("Estas agregando una respuesta")
     print("Tene en cuenta que minimo debes agregar dos respuestas a una palabra clave")
+    print("Con la cadena 1 no agregas mas respuetas")
     palabraClave = validarExistencia()
     tuplaRespuestas = agregarVariasRespuestas()
     dic.diccionario[palabraClave] = tuplaRespuestas
     print(f"Agregamos satisfactoriamente la palabra clave {palabraClave} con las posibles respuestas {tuplaRespuestas}")
-    print(dic.diccionario[palabraClave])
-
 
 def recursividadMenu(num):
     if num == "1":
         hablarConEliza()
+        recursividadMenu(input("Escriba 1, 2 o 3: "))
     elif num == "2":
         agregarRespuestas()
         recursividadMenu(input("Escriba 1, 2 o 3: "))
@@ -108,8 +106,8 @@ def recursividadMenu(num):
 
 registro_conversacion = []
 print("Bienvenido a Eliza, tu psicologa virtual")
-print("Para habalar con Eliza seleccione 1")
-print("Para agregar posibles respuestas seleccione 2")
+print("Para habalar con Eliza escriba 1")
+print("Para agregar respuestas escriba 2")
 print("Para salir escriba 3")
 print()
 selecMenu = input("Escriba 1, 2 o 3 segun corresponda: ")
