@@ -58,3 +58,71 @@ Usuario: no
 Eliza: Por que no?
 FIN DE LA CONVERSACION
 
+INICIO DE LA CONVERSACION
+Usuario: estoy triste
+Eliza: crees que es normal estar triste?
+Usuario: si
+Eliza: Pareces muy seguro
+Usuario: y si
+Eliza: Pareces muy seguro
+Usuario: enojado
+Eliza: Contame más sobre por qué estás enojado.
+Usuario: estoy enojado porque esta lloviendo y se cancelo el concierto de taylor
+Eliza: A que se debe que estes asi
+Usuario: y se cancelo taylor
+Eliza: no entiendo
+FIN DE LA CONVERSACION
+
+INICIO DE LA CONVERSACION
+Usuario: como te llamas
+Eliza: hableme mas
+Usuario: cual es tu nombre
+Eliza: continue
+Usuario: como te llamas
+Eliza: hableme mas
+Usuario: primos
+Eliza: t
+Usuario: primo
+Eliza: q
+Usuario: primos
+Eliza: c
+Usuario: autoayuda
+Eliza: La autoayuda es un camino hacia la mejora personal.
+Usuario: fobias
+Eliza: Las fobias pueden superarse. Estoy aquí para apoyarte en el proceso.
+Usuario: addicones
+Eliza: por que?
+Usuario: adicciones
+Eliza: La recuperación de las adicciones es un proceso. ¿En qué etapa te encuentras?
+Usuario: escucha
+Eliza: La comunicación abierta es esencial. ¿Hay algo que quieras compartir?
+Usuario: pensamientos suicidas
+Eliza: hableme mas
+Usuario: trastornos alimentarios
+Eliza: por que?
+Usuario: esperanza
+Eliza: Hablemos de tus sueños y aspiraciones. La esperanza puede impulsarlos.
+FIN DE LA CONVERSACION
+
+INICIO DE LA CONVERSACION
+Usuario: padres
+Eliza: i
+Usuario: amor
+Eliza: Hablemos de tus experiencias en el amor.
+Usuario: autoayuda
+Eliza: La autorreflexión y el crecimiento personal son importantes. ¿Cómo puedo ayudarte a crecer?
+Usuario: fobias
+Eliza: Las fobias pueden superarse. Estoy aquí para apoyarte en el proceso.
+Usuario: adicciones
+Eliza: La recuperación de las adicciones es un proceso. ¿En qué etapa te encuentras?
+Usuario: relajacion
+Eliza: continue
+Usuario: crecimiento
+Eliza: Hablemos de tus ambiciones y cómo alcanzarlas.
+Usuario: pensamientos suicidas
+Eliza: ok
+FIN DE LA CONVERSACION
+
+INICIO DE LA CONVERSACION
+FIN DE LA CONVERSACION
+

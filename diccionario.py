@@ -5,7 +5,14 @@ diccionario = {
     "tengo": ("Porque tenes *?", "como crees que lo obtuviste?", "desde cuando tenes *?"),
     'si': ("Pareces muy seguro", "Ok, podes elaborar mas?"),
     'no': ("Por que no?", "Ok, podes elaborar mas?"),
-    'enojado': ("El enojo es normal. ¿Qué te pasó?", "Hablemos de eso. Expresar el enojo es importante.", "Contame más sobre por qué estás enojado."),
+
+}
+
+listaDeBasuras = ["me", "te", "se", "nos", "la", "lo", "las", "los", "muy", "mucho", "mega", "super", "re", "ultra"]
+punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+info = {
+'enojado': ("El enojo es normal. ¿Qué te pasó?", "Hablemos de eso. Expresar el enojo es importante.", "Contame más sobre por qué estás enojado."),
     'cansado': ("¿Tuviste un día agitado?", "¿Necesitás ayuda para relajarte?", "Hablemos sobre la importancia de descansar."),
     'terapia': ("La terapia es muy útil. ¿Alguna vez pensaste en hablar con un terapeuta profesional?", "La terapia puede brindarte apoyo. ¿Tenés dudas al respecto?", "Estoy acá para orientarte sobre la terapia."),
     'apoyo': ("El apoyo es fundamental. ¿En qué puedo ayudarte hoy?", "¿Necesitás consejos o simplemente charlar? Estoy acá para vos.", "Sentite libre de compartir tus pensamientos y preocupaciones."),
@@ -17,16 +24,13 @@ diccionario = {
     'autoestima': ("La autoestima juega un papel crucial en tu bienestar emocional. ¿Cómo te sientes acerca de ti mismo?", "La autoestima puede influir en tus decisiones y relaciones. ¿Quierss hablar sobre cómo mejorarla?", "La autoestima es importante. ¿Cómo puedo apoyarte en construir una autoestima más positiva?"),
     'relaciones': ("Las relaciones personales pueden ser complicadas. ¿Tenés dificultades en tus relaciones con familiares, amigos o parejas?", "Las relaciones son fundamentales. ¿Necesitas consejos sobre cómo mejorar tus relaciones?", "Hablemos sobre tus desafíos en las relaciones y cómo superarlos."),
     'duelo': ("El duelo es un proceso natural cuando perdemos a alguien cercano. ¿Has experimentado una pérdida reciente?", "El duelo puede ser abrumador. ¿Necesitas apoyo para sobrellevarlo?", "Perder a un ser querido es una experiencia difícil. Estoy aquí para escucharte."),
-    'autoayuda': ("La autoayuda es una herramienta valiosa para el crecimiento personal. ¿Necesitas consejos sobre cómo mejorar tu bienestar emocional?", "La autorreflexión y el crecimiento personal son importantes. ¿Cómo puedo ayudarte a crecer?", "La autoayuda es un camino hacia la mejora personal. Tenés metas en mente?",
-                  "La autoayuda es valiosa. ¿Querés consejos sobre cómo mejorar tu bienestar emocional?", "La autorreflexión y el crecimiento personal son importantes. Estoy acá para guiarte.", "La autoayuda es un camino hacia la mejora personal."),
+    'autoayuda': ("La autoayuda es una herramienta valiosa para el crecimiento personal. ¿Necesitas consejos sobre cómo mejorar tu bienestar emocional?", "La autorreflexión y el crecimiento personal son importantes. ¿Cómo puedo ayudarte a crecer?", "La autoayuda es un camino hacia la mejora personal. Tenés metas en mente?", "La autoayuda es valiosa. ¿Querés consejos sobre cómo mejorar tu bienestar emocional?", "La autorreflexión y el crecimiento personal son importantes. Estoy acá para guiarte.", "La autoayuda es un camino hacia la mejora personal."),
     'fobias': ("Las fobias pueden ser debilitantes. ¿Tenés miedos irracionales que afectan tu vida diaria?", "Hablemos sobre tus fobias y cómo enfrentarlas. ¿Has considerado la terapia de exposición?", "Las fobias pueden superarse. Estoy aquí para apoyarte en el proceso."),
     'adicciones': ("Las adicciones pueden tener un gran impacto en la vida. ¿Tenés problemas con el abuso de sustancias o comportamientos adictivos?", "Las adicciones son desafiantes. ¿Necesitas recursos para la recuperación?", "La recuperación de las adicciones es un proceso. ¿En qué etapa te encuentras?"),
     'relajación': ("La relajación es clave para la salud mental. ¿Necesitás técnicas de relajación?", "Hablemos de cómo encontrar momentos de paz y calma en tu vida.", "La relajación puede ayudarte a reducir el estrés. Estoy acá para enseñarte."),
     'crecimiento': ("El crecimiento personal es un viaje continuo. ¿Tenés metas de crecimiento personal que quieras discutir?", "El desarrollo personal es importante. Estoy acá para apoyar tus objetivos.", "Hablemos de tus ambiciones y cómo alcanzarlas."),
     'escucha': ("Estoy aquí para escucharte. ¿Qué te preocupa hoy?", "La comunicación abierta es esencial. ¿Hay algo que quieras compartir?", "Puedes confiar en mí. Habla sobre tus pensamientos y sentimientos."),
     'esperanza': ("La esperanza es poderosa. ¿Qué te da esperanza en la vida?", "Hablemos de tus sueños y aspiraciones. La esperanza puede impulsarlos.", "La esperanza es una fuerza motivadora."),
-    'pensamientos suicidas': ("Los pensamientos suicidas son extremadamente serios. Si estás teniendo estos pensamientos, busca ayuda profesional de inmediato.", "La vida puede ser abrumadora, pero hay ayuda disponible. No estás solo en esto. Hablar sobre tus pensamientos suicidas es un paso importante hacia la recuperación."),
-    'trastornos alimentarios': ("Los trastornos alimentarios pueden afectar gravemente la salud. ¿Estás lidiando con problemas alimentarios? ¿Necesitas apoyo para superarlos?", "Hablemos de tus patrones alimentarios y cómo puedes trabajar en una relación más saludable con la comida.", "Los trastornos alimentarios son tratables. Estoy acá para ayudarte en tu proceso de recuperación."),
     'autolesiones': ("Las autolesiones son una preocupación seria. ¿Has experimentado autolesiones o conoces a alguien que lo ha hecho?", "Hablemos sobre tus sentimientos y el deseo de autolesionarte. Es importante buscar ayuda profesional.", "Las autolesiones son un síntoma de angustia emocional. ¿Cómo puedo ayudarte a encontrar alternativas saludables?"),
     'soledad': ("La soledad puede ser difícil. ¿Cómo estás lidiando con la soledad? ¿Necesitas consejos para superarla?", "Hablemos de estrategias para conectarte con otros y superar la soledad.", "La soledad es una experiencia común."),
     'padre': ("Los padres suelen ser una parte importante de nuestra vida. ¿Tenés alguna preocupación o pregunta sobre tu padre?"),
@@ -47,10 +51,10 @@ diccionario = {
     'primo': ("Los primos son como amigos de la familia. ¿Hay algo específico que quieras discutir sobre tu primo?"),
     'primos': ("Los primos son como amigos de la familia. ¿Hay algo específico que quieras discutir sobre tus primos?"),
     'como estas': ("Estoy bien, hablemos de vos, como estás?"),
-    'como te llamas': ("Mi nombre es ELIZA"),
+    'nombre': ("Mi nombre es ELIZA", "Me llamo Eliza"),
     'cual es tu nombre': ("Mi nombre es ELIZA"),
     'como es tu nombre': ("Mi nombre es ELIZA"),
-    }
+    'pensamientos suicidas': ("Los pensamientos suicidas son extremadamente serios. Si estás teniendo estos pensamientos, busca ayuda profesional de inmediato.", "La vida puede ser abrumadora, pero hay ayuda disponible. No estás solo en esto. Hablar sobre tus pensamientos suicidas es un paso importante hacia la recuperación."),
+    'trastornos alimentarios': ("Los trastornos alimentarios pueden afectar gravemente la salud. ¿Estás lidiando con problemas alimentarios? ¿Necesitas apoyo para superarlos?", "Hablemos de tus patrones alimentarios y cómo puedes trabajar en una relación más saludable con la comida.", "Los trastornos alimentarios son tratables. Estoy acá para ayudarte en tu proceso de recuperación."),
 
-listaDeBasuras = ["me", "te", "se", "nos", "la", "lo", "las", "los", "muy", "mucho", "mega", "super", "re", "ultra"]
-punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+}

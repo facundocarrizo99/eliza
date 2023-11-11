@@ -32,10 +32,10 @@ def procesarCadena(entrada):
         print(respuestaInicial)
         registro_conversacion.append(f"Usuario: {entrada}\nEliza: {respuestaInicial}\n")
 
-def limpiarTexto(entrada):
-    entrada = entrada.lower()
-    entrada = "".join(c for c in entrada if c.isalnum())
-    return entrada
+def limpiarTexto(cad):
+    cad = cad.lower()
+    cad = "".join(c for c in cad if c.isalnum())
+    return cad
 
 def sacarPuntuacion(cadena):
     for carPuntuacion in cadena:
@@ -50,6 +50,8 @@ print()
 entrada = input("Hola! ¿Cual es tu problema?")
 entrada = entrada.lower()
 mensajeAnterior = ""
+
+#TO DO: El analizador del diccionario solo llega hasta esperanza, linea 27, la 28 ya no
 
 while entrada != "adios":
     ultimoMensaje = limpiarTexto(entrada)
@@ -68,3 +70,4 @@ with open('conversacion.txt', 'a') as archivo:
     for linea in registro_conversacion:
         archivo.write(linea)
     archivo.write("FIN DE LA CONVERSACION\n\n")
+
