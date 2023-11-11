@@ -43,31 +43,74 @@ def sacarPuntuacion(cadena):
             cadena = cadena.replace(carPuntuacion, "")
     return cadena
 
+def hablarConEliza():
+    print("Escribe 'adios' para salir")
+    entrada = input("Hola! me llamo Eliza. Como te puedo ayudar hoy?: ")
+    entrada = entrada.lower()
+    mensajeAnterior = ""
+    while entrada != "adios":
+        ultimoMensaje = limpiarTexto(entrada)
+        if ultimoMensaje == mensajeAnterior:
+            print("ya te conteste esta pregunta, tienes otra consulta...?")
+            mensajeAnterior = ultimoMensaje
+        else:
+            mensajeAnterior = ultimoMensaje
+            procesarCadena(
+                sacarPuntuacion(entrada))  # Sacamos los caracteres de puntuacion antes de comparar los elementos
+        print()
+        entrada = input("").lower()
+
+    print("¡Nos vemos! ¡Gracias!")
+    with open('conversacion.txt', 'a') as archivo:
+        archivo.write("INICIO DE LA CONVERSACION\n")
+        for linea in registro_conversacion:
+            archivo.write(linea)
+        archivo.write("FIN DE LA CONVERSACION\n\n")
+
+def agregarVariasRespuestas():
+    listaRespuestas = []
+    unaNuevasRespuestas = input("Ingrese una respueta: ")
+    while unaNuevasRespuestas != "xyz123":
+        listaRespuestas.append(unaNuevasRespuestas)
+        unaNuevasRespuestas = input("Ingrese otra respueta: ")
+    return tuple(listaRespuestas)
+
+def validarExistencia():
+    clave = input("Ingrese UNA palabra clave: ")
+    if clave in dic.diccionario:
+        clave = input("Ingrese otra Palabra Clave, la anterior ya existe: ")
+        validarExistencia()
+    return clave
+
+def agregarRespuestas():
+    print("Estas agregando una respuesta")
+    print("Tene en cuenta que minimo debes agregar dos respuestas a una palabra clave")
+    palabraClave = validarExistencia()
+    tuplaRespuestas = agregarVariasRespuestas()
+    dic.diccionario[palabraClave] = tuplaRespuestas
+    print(f"Agregamos satisfactoriamente la palabra clave {palabraClave} con las posibles respuestas {tuplaRespuestas}")
+    print(dic.diccionario[palabraClave])
+
+
+def recursividadMenu(num):
+    if num == "1":
+        hablarConEliza()
+    elif num == "2":
+        agregarRespuestas()
+        recursividadMenu(input("Escriba 1, 2 o 3: "))
+    elif num == "3":
+        print("Fin del programa")
+    else:
+        recursividadMenu(input("Escriba 1, 2 o 3: "))
+
+
+### MAIN ###
+
 registro_conversacion = []
 print("Bienvenido a Eliza, tu psicologa virtual")
-print("Escribe 'adios' para salir")
+print("Para habalar con Eliza seleccione 1")
+print("Para agregar posibles respuestas seleccione 2")
+print("Para salir escriba 3")
 print()
-entrada = input("Hola! ¿Cual es tu problema?")
-entrada = entrada.lower()
-mensajeAnterior = ""
-
-#TO DO: El analizador del diccionario solo llega hasta esperanza, linea 27, la 28 ya no
-
-while entrada != "adios":
-    ultimoMensaje = limpiarTexto(entrada)
-    if ultimoMensaje == mensajeAnterior:
-        print("ya te conteste esta pregunta, tienes otra consulta...?")
-        mensajeAnterior = ultimoMensaje
-    else:
-        mensajeAnterior = ultimoMensaje
-        procesarCadena(sacarPuntuacion(entrada)) #Sacamos los caracteres de puntuacion antes de comparar los elementos
-    print()
-    entrada = input("").lower()
-
-print("¡Nos vemos! ¡Gracias!")
-with open('conversacion.txt', 'a') as archivo:
-    archivo.write("INICIO DE LA CONVERSACION\n")
-    for linea in registro_conversacion:
-        archivo.write(linea)
-    archivo.write("FIN DE LA CONVERSACION\n\n")
-
+selecMenu = input("Escriba 1, 2 o 3 segun corresponda: ")
+recursividadMenu(selecMenu)

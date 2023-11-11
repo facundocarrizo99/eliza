@@ -126,3 +126,15 @@ FIN DE LA CONVERSACION
 INICIO DE LA CONVERSACION
 FIN DE LA CONVERSACION
 
+INICIO DE LA CONVERSACION
+Usuario: hola
+Eliza: Contame
+Usuario: estoy triste
+Eliza: crees que es normal estar triste?
+FIN DE LA CONVERSACION
+
+INICIO DE LA CONVERSACION
+Usuario: cansado
+Eliza: estoy cansado jefe
+FIN DE LA CONVERSACION
+
