@@ -1,0 +1,18 @@
+furioso,('Te parece normal estar furioso?', 'Lo que me da mas bronca es que esto va a andar')
+padre,("Los padres suelen ser una parte importante de nuestra vida. ¿Tenés alguna preocupación o pregunta sobre tu padre?","Tu padre te dio la vida")
+padres,("Los padres suelen ser una parte importante de nuestra vida. ¿Tenés alguna preocupación o pregunta sobre tus padres?"),
+hermano,("Los hermanos son una parte especial de la familia. ¿Hay algo en particular que quieras hablar sobre tu hermano?"),
+hermanos,("Los hermanos son una parte especial de la familia. ¿Hay algo en particular que quieras hablar sobre tus hermanos?"),
+abuelo,("Los abuelos tienen un lugar especial en nuestras vidas. ¿Tenés anécdotas o inquietudes sobre tu abuelo?"),
+abuelos,("Los abuelos tienen un lugar especial en nuestras vidas. ¿Tenés anécdotas o inquietudes sobre tus abuelos?"),
+hijo,("Los hijos son una gran responsabilidad. ¿Necesitas consejos sobre la crianza o tenés preocupaciones sobre tu hijo?"),
+hijos,("Los hijos son una gran responsabilidad. ¿Necesitas consejos sobre la crianza o tenés preocupaciones sobre tus hijos?"),
+pareja,("La pareja es una parte importante de la vida. ¿Tenés preguntas o inquietudes sobre tu pareja?"),
+suegro,("Las relaciones con los suegros pueden ser desafiantes. ¿Quieres hablar sobre tus experiencias con tu suegro?"),
+suegros,("Las relaciones con los suegros pueden ser desafiantes. ¿Quieres hablar sobre tus experiencias con tus suegros?"),
+tío,("Los tíos son miembros interesantes de la familia. ¿Tenés alguna anécdota o cuestiones que quieras compartir sobre tu tío?"),
+tíos,("Los tíos son miembros interesantes de la familia. ¿Tenés alguna anécdota o cuestiones que quieras compartir sobre tus tíos?"),
+sobrino,("Los sobrinos pueden ser una fuente de alegría. ¿Tenés historias o preocupaciones sobre tu sobrino?"),
+sobrinos,("Los sobrinos pueden ser una fuente de alegría. ¿Tenés historias o preocupaciones sobre tus sobrinos?"),
+primo,("Los primos son como amigos de la familia. ¿Hay algo específico que quieras discutir sobre tu primo?"),
+primos,("Los primos son como amigos de la familia", "¿Hay algo específico que quieras discutir sobre tus primos?"),
