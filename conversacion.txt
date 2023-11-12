@@ -162,3 +162,37 @@ Usuario: si
 Eliza: Pareces muy seguro
 FIN DE LA CONVERSACION
 
+INICIO DE LA CONVERSACION
+Usuario: furioso
+Eliza: Te parece normal estar furioso
+FIN DE LA CONVERSACION
+
+INICIO DE LA CONVERSACION
+Usuario: furiso
+Eliza: ok
+Usuario: furioso lol
+Eliza: Lo que me da mas bronca es que esto va a andar
+FIN DE LA CONVERSACION
+
+INICIO DE LA CONVERSACION
+Usuario: pedro
+Eliza: bueno
+Usuario: hola
+Eliza: Bienvenido
+Usuario: pedro
+Eliza: bueno
+Usuario: hola
+Eliza: Hola
+Usuario: pedro
+Eliza: bueno
+Usuario: hola
+Eliza: Contame
+Usuario: pedro
+Eliza: bueno
+FIN DE LA CONVERSACION
+
+INICIO DE LA CONVERSACION
+Usuario: pedrop
+Eliza: por que?
+FIN DE LA CONVERSACION
+

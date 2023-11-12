@@ -1,4 +1,5 @@
 import random
+import os
 
 diccionario = {
     "necesito": ("Está seguro que necesita *", "Por que necesita *"),
@@ -44,8 +45,37 @@ diccionario = {
     'soledad': ("La soledad puede ser difícil. ¿Cómo estás lidiando con la soledad? ¿Necesitas consejos para superarla?", "Hablemos de estrategias para conectarte con otros y superar la soledad.", "La soledad es una experiencia común."),
     }
 
-listaDeBasuras = ["me", "te", "se", "nos", "la", "lo", "las", "los", "muy", "mucho", "mega", "super", "re", "ultra"]
+listaDeBasuras = ["me", "te", "se", "nos", "la", "lo", "las", "los", "muy", "mucho", "mega", "super", "re", "ultra",
+                  "yo", "tú", "él", "ella", "nosotros", "nosotras", "vosotros", "vosotras", "ellos", "ellas",
+                  "este", "ese", "aquel", "esta", "esa", "aquella", "esto", "eso", "aquello",
+                  "alguno", "ninguno", "otro", "varios", "cualquiera", "algunos", "ningunos", "otros", "varias", "cualquieras",
+                  "primer", "tercer", "cuarto", "último", "mismo", "propio", "tal", "cuán", "cuánto", "cómo", "cuándo", "dónde", "adónde", "cuál", "cuáles", "quiénes", "cual", "cuánta", "cuántas", "cuántos", "tan", "tanto", "tan", "tanto",
+                  "entre", "hacia", "durante", "tras", "para", "por", "sin", "sobre", "bajo", "de", "en", "con", "a", "desde",
+                  "aquí", "allí", "acá", "ahí", "cerca", "lejos", "encima", "debajo", "dentro", "fuera", "adelante", "atrás"]
 punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+
+def buscarEnRespuestasExtra(buscar):
+    respuestas = []
+    try:
+        with open('respuestasAgregadas.csv', 'r') as archivo:
+            for linea in archivo:
+                listaDeLinea = linea.split(",")
+                if listaDeLinea[0] == buscar:
+                    listaDeLinea.remove(buscar)
+                    for respuesta in listaDeLinea:
+                        respuesta = sacarPuntuacion(respuesta)
+                        respuesta = respuesta.replace("\n", "")
+                        respuesta = respuesta.lstrip(" ")
+                        respuestas.append(respuesta)
+                    break
+            return respuestas
+    except OSError as message:
+        print("No existe el archivo")
+    finally:
+        try:
+            archivo.close()
+        except NameError:
+            print("NameError")
 
 def componerOracion(texto, listaPalabras):
     try:
@@ -57,14 +87,29 @@ def componerOracion(texto, listaPalabras):
         value = texto
     return value
 
+def elegirUnaRespuesta(respuestas):
+    if len(respuestas) == 1:
+        value = respuestas
+    else:
+        value = random.choice(respuestas)
+    return value
+
 def analizarCadena(dic, listaPalabras):
     for palabra in listaPalabras:
         if palabra in dic:
-            respuesta = random.choice(dic[palabra])
+            respuesta = elegirUnaRespuesta(dic[palabra])
             listaPalabras.remove(palabra)
             break
-        else:
-            respuesta = random.choice(dic["sinrespuesta"])
+        elif os.path.exists('respuestasAgregadas.csv'):
+            respuestas = buscarEnRespuestasExtra(palabra)
+            if len(respuestas) != 0:
+                respuesta = elegirUnaRespuesta(respuestas)
+                listaPalabras.remove(palabra)
+                while respuesta == "":
+                    respuesta = elegirUnaRespuesta(respuestas)
+                break
+            else:
+                respuesta = elegirUnaRespuesta(dic["sinrespuesta"])
     return respuesta
 
 def procesarCadena(entrada):
@@ -116,23 +161,28 @@ def agregarVariasRespuestas():
     listaRespuestas = []
     unaNuevasRespuestas = input("Ingrese una respuesta: ")
     while unaNuevasRespuestas != "1":
-        listaRespuestas.append(unaNuevasRespuestas)
-        unaNuevasRespuestas = input("Ingrese otra respuesta: ")
+        if unaNuevasRespuestas == "":
+            unaNuevasRespuestas = input("Ingrese una respuesta no vacia: ")
+        else:
+            listaRespuestas.append(unaNuevasRespuestas)
+            unaNuevasRespuestas = input("Ingrese otra respuesta: ")
     return tuple(listaRespuestas)
 
 def validarExistencia():
     clave = input("Ingrese UNA palabra clave: ")
-    while clave in diccionario:
+    while clave in diccionario or clave == "" or len(buscarEnRespuestasExtra(clave)) != 0:
         clave = (input("Ingrese otra Palabra Clave, la anterior ya existe: "))
     return clave
 
 def agregarRespuestas():
     print("Estas agregando una respuesta")
-    print("Tene en cuenta que minimo debes agregar dos respuestas a una palabra clave")
     print("Con la cadena 1 no agregas mas respuetas")
     palabraClave = validarExistencia()
-    tuplaRespuestas = agregarVariasRespuestas()
-    diccionario[palabraClave] = tuplaRespuestas
+    tuplaRespuestas = str(agregarVariasRespuestas())
+    pregYResp = palabraClave + "," + tuplaRespuestas
+    with open('respuestasAgregadas.csv', 'a') as archivo:
+        archivo.write(pregYResp + "\n")
+    archivo.close()
     print(f"Agregamos satisfactoriamente la palabra clave {palabraClave} con las posibles respuestas {tuplaRespuestas}")
 
 def recursividadMenu(num):
